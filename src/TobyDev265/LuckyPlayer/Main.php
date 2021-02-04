@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * LuckyPlayer v1.0.0
+ * Copyright TobyDev265
+ * Released under the GNU General Public License v2.0 license
+ * https://github.com/TobyDev265/LuckyPlayer/blob/main/LICENSE
+ */
+
 namespace TobyDev265\LuckyPlayer;
 
 use pocketmine\{Server, Player};
