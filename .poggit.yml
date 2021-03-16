@@ -5,4 +5,5 @@ branches:
 projects:
   LuckyPlayer:
     path: ""
+    icon: icon.png
 ...
