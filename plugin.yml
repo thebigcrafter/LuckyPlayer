@@ -1,7 +1,7 @@
 ---
 name: LuckyPlayer
 author: TobyDev265
-version: 1.0.1
+version: 1.0.2
 description: Give money to players when they join the server at lucky time
 depend: EconomyAPI
 api:
