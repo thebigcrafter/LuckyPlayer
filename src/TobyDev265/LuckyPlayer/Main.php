@@ -16,6 +16,7 @@ use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\utils\{Config, TextFormat as C};
 
 use onebone\economyapi\EconomyAPI;
+use JackMD\UpdateNotifier\UpdateNotifier;
 
 class Main extends PluginBase implements Listener {
     public function onEnable() {
