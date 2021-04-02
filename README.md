@@ -1,6 +1,5 @@
 [![Build Status](https://www.travis-ci.com/TobyDev265/LuckyPlayer.svg?branch=main)](https://www.travis-ci.com/TobyDev265/LuckyPlayer)
 ![GitHub all releases](https://img.shields.io/github/downloads/TobyDev265/LuckyPlayer/total)
-![GitHub](https://img.shields.io/github/license/TobyDev265/LuckyPlayer)
 [![](https://poggit.pmmp.io/shield.state/LuckyPlayer)](https://poggit.pmmp.io/p/LuckyPlayer)
 [![](https://poggit.pmmp.io/shield.dl.total/LuckyPlayer)](https://poggit.pmmp.io/p/LuckyPlayer)
 [![Discord](https://img.shields.io/discord/821713643170430978.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/dXZNYu2yxx)
@@ -22,3 +21,5 @@ message: "{PLAYER_NAME} is the {LUCKY_NUMBER}th player so he/she have {MONEY}$ f
 # Installation
 - Make sure that Sheep is installed
 - Then use ```install LuckyPlayer``` to install plugin
+# License
+Released under the GPL-2.0 license.
