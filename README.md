@@ -1,4 +1,4 @@
-[![Build Status](https://www.travis-ci.com/MintoD/LuckyPlayer.svg?branch=main)](https://www.travis-ci.com/TobyDev265/LuckyPlayer)
+[![Build Status](https://www.travis-ci.com/MintoD/LuckyPlayer.svg?branch=main)](https://www.travis-ci.com/MintoD/LuckyPlayer)
 ![GitHub all releases](https://img.shields.io/github/downloads/MintoD/LuckyPlayer/total)
 [![](https://poggit.pmmp.io/shield.state/LuckyPlayer)](https://poggit.pmmp.io/p/LuckyPlayer)
 [![](https://poggit.pmmp.io/shield.dl.total/LuckyPlayer)](https://poggit.pmmp.io/p/LuckyPlayer)
