@@ -2,7 +2,7 @@
 ![GitHub all releases](https://img.shields.io/github/downloads/MintoD/LuckyPlayer/total)
 [![](https://poggit.pmmp.io/shield.state/LuckyPlayer)](https://poggit.pmmp.io/p/LuckyPlayer)
 [![](https://poggit.pmmp.io/shield.dl.total/LuckyPlayer)](https://poggit.pmmp.io/p/LuckyPlayer)
-[![Discord](https://img.shields.io/discord/821713643170430978.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/dXZNYu2yxx)
+[![Discord](https://img.shields.io/discord/832970039607033857.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/6sDGCk2JuD)
 # LuckyPlayer v1.0.2
 **Give money to players when they join the server at lucky time.**  
 For example: You config ```luckyMoney: 100``` and ```luckyNumber: 1000```. If player is the 1000th player join the server, they will have 100$  
