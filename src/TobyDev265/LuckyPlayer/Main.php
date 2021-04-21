@@ -31,7 +31,6 @@ class Main extends PluginBase implements Listener {
         $player = $e->getPlayer();
         $luckyNumberB = $this->data->get("number");
         $this->data->set("number", $luckyNumberB + 1);
-        $this->data->save();
         $luckyNumberA = $this->data->get("number");
         if($luckyNumberA == $this->cfg->get("luckyNumber")) {
             EconomyAPI::getInstance()->addMoney($player, $this->cfg->get("luckyMoney"));
@@ -40,8 +39,8 @@ class Main extends PluginBase implements Listener {
             $luckyMessage_3 = str_replace("{LUCKY_NUMBER}", $this->cfg->get("luckyNumber"), $luckyMessage_2);
             $player->sendMessage($luckyMessage_3);
             $this->data->set("number", 0);
-            $this->data->save();
         }
+        $this->data->save();
     }
 
 }
