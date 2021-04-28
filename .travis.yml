@@ -8,5 +8,3 @@ install:
 
 script:
 - "if [ -f ${TRAVIS_BUILD_DIR}/../PocketMine/unstaged/LuckyPlayer.phar ] ; then wget -O - https://poggit.pmmp.io/res/travisScript.sh | bash -s - LuckyPlayer LuckyPlayer ; else true ; fi"
-notifications:
-  email: true
