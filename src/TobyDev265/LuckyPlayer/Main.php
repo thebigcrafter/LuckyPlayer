@@ -19,13 +19,6 @@ use onebone\economyapi\EconomyAPI;
 use JackMD\UpdateNotifier\UpdateNotifier;
 
 class Main extends PluginBase implements Listener {
-
-    /**
-     * @var Config
-     */
-    private $cfg;
-    private $data;
-
     public function onEnable() {
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
         @mkdir($this->getDataFolder());
