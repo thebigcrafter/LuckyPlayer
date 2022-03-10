@@ -1,10 +1,7 @@
----
 name: LuckyPlayer
-author: TobyDev265
-version: 1.0.2
+author: MintoD
+version: 2.0.0
 description: Give money to players when they join the server at lucky time
-depend: EconomyAPI
-api:
-- 3.0.0
+depend: BedrockEconomy
+api: 4.0.0
 main: TobyDev265\LuckyPlayer\Main
-...
