@@ -16,7 +16,7 @@ luckyNumber: 1000
 message: "{PLAYER_NAME} is the {LUCKY_NUMBER}th player so he/she have {MONEY}$ for free!"
 # {PLAYER_NAME} for the name of lucky player
 # {MONEY} for the luckyMoney
-# {LUCKY_NUMBER} fro the luckyNumber
+# {LUCKY_NUMBER} for the luckyNumber
 ```
 # Installation
 - Make sure that Sheep is installed
