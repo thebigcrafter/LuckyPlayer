@@ -6,7 +6,4 @@ projects:
   LuckyPlayer:
     path: ""
     icon: icon.png
-    libs:
-    - src: JackMD/UpdateNotifier/UpdateNotifier
-      version: ^2.1.0
 ...
