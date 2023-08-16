@@ -6,7 +6,7 @@
  * https://github.com/thebigcrafter/LuckyPlayer#GPL-2.0-1
  */
 
-namespace TobyDev265\LuckyPlayer;
+namespace tobydev27\LuckyPlayer;
 
 use cooldogedev\BedrockEconomy\api\BedrockEconomyAPI;
 use pocketmine\event\Listener;
