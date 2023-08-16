@@ -1,9 +1,9 @@
-[![Build Status](https://www.travis-ci.com/MintoD/LuckyPlayer.svg?branch=main)](https://www.travis-ci.com/MintoD/LuckyPlayer)
-[![PoggitCI](https://poggit.pmmp.io/ci.shield/MintoD/LuckyPlayer/LuckyPlayer)](https://poggit.pmmp.io/ci/MintoD/LuckyPlayer/LuckyPlayer)
-![GitHub all releases](https://img.shields.io/github/downloads/MintoD/LuckyPlayer/total)
+<!-- [![Build Status](https://www.travis-ci.com/thebigcrafter/LuckyPlayer.svg?branch=main)](https://www.travis-ci.com/thebigcrafter/LuckyPlayer) -->
+[![PoggitCI](https://poggit.pmmp.io/ci.shield/thebigcrafter/LuckyPlayer/LuckyPlayer)](https://poggit.pmmp.io/ci/thebigcrafter/LuckyPlayer/LuckyPlayer)
+![GitHub all releases](https://img.shields.io/github/downloads/thebigcrafter/LuckyPlayer/total)
 [![](https://poggit.pmmp.io/shield.state/LuckyPlayer)](https://poggit.pmmp.io/p/LuckyPlayer)
 [![](https://poggit.pmmp.io/shield.dl.total/LuckyPlayer)](https://poggit.pmmp.io/p/LuckyPlayer)
-# LuckyPlayer v1.0.2
+# LuckyPlayer
 **Give money to players when they join the server at lucky time.**  
 For example: You config ```luckyMoney: 100``` and ```luckyNumber: 1000```. If player is the 1000th player join the server, they will have 100$  
 ``NOTE!`` Make sure EconomyAPI is installed.
@@ -21,5 +21,6 @@ message: "{PLAYER_NAME} is the {LUCKY_NUMBER}th player so he/she have {MONEY}$ f
 # Installation
 - Make sure that Sheep is installed
 - Then use ```install LuckyPlayer``` to install plugin
+
 # License
 Released under the GPL-2.0 license.

@@ -1,4 +1,4 @@
---- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/MintoD3v/LuckyPlayer
+--- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/thebigcrafter/LuckyPlayer
 build-by-default: true
 branches:
 - main
@@ -6,4 +6,7 @@ projects:
   LuckyPlayer:
     path: ""
     icon: icon.png
+    libs:
+    - src: thebigcrafter/Hydrogen/Hydrogen
+      version: ^1.0.0
 ...
