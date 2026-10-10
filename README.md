@@ -6,7 +6,7 @@
 # LuckyPlayer
 **Give money to players when they join the server at lucky time.**  
 For example: You config ```luckyMoney: 100``` and ```luckyNumber: 1000```. If player is the 1000th player join the server, they will have 100$  
-``NOTE!`` Make sure EconomyAPI is installed.
+``NOTE!`` Make sure [BedrockEconomy](https://github.com/cooldogedev/BedrockEconomy) is installed.
 # Config
 ```yaml
 luckyMoney: 100
@@ -19,8 +19,9 @@ message: "{PLAYER_NAME} is the {LUCKY_NUMBER}th player so he/she have {MONEY}$ f
 # {LUCKY_NUMBER} for the luckyNumber
 ```
 # Installation
-- Make sure that Sheep is installed
-- Then use ```install LuckyPlayer``` to install plugin
+- Download `LuckyPlayer.phar` from the latest release.
+- Install BedrockEconomy if you want LuckyPlayer to award balances.
+- Place `LuckyPlayer.phar` in the server's `plugins` folder and restart the server.
 
 # License
 Released under the GPL-2.0 license.

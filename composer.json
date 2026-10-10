@@ -1,0 +1,18 @@
+{
+    "name": "thebigcrafter/lucky-player",
+    "description": "PocketMine-MP plugin that rewards a lucky joining player",
+    "license": "GPL-2.0-only",
+    "require-dev": {
+        "phpstan/phpstan": "^2.1",
+        "pocketmine/pocketmine-mp": "^5.44.3"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "cooldogedev\\BedrockEconomy\\": "tools/stubs/BedrockEconomy/",
+            "thebigcrafter\\Hydrogen\\": "tools/stubs/Hydrogen/"
+        }
+    },
+    "scripts": {
+        "analyse": "phpstan analyse -c phpstan.neon.dist"
+    }
+}

@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * Copyright TobyDev265
  * Released under the GNU General Public License v2.0 license
@@ -14,6 +16,10 @@ use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 use thebigcrafter\Hydrogen\Hydrogen;
+use function is_float;
+use function is_int;
+use function is_string;
+use function str_replace;
 
 class Main extends PluginBase implements Listener {
 
@@ -27,19 +33,34 @@ class Main extends PluginBase implements Listener {
 		$this->data = new Config($this->getDataFolder() . "data.yml", Config::YAML);
 	}
 
-	public function onJoin(PlayerJoinEvent $e) {
+	public function onJoin(PlayerJoinEvent $e) : void {
 		$player = $e->getPlayer();
-		$luckyNumberB = $this->data->get("number");
+		$luckyNumberB = $this->data->get("number", 0);
+		if (!is_int($luckyNumberB)) {
+			$luckyNumberB = 0;
+		}
 		$this->data->set("number", $luckyNumberB + 1);
 		$luckyNumberA = $this->data->get("number");
-		if ($luckyNumberA == $this->getConfig()->get("luckyNumber")) {
-			BedrockEconomyAPI::getInstance()->addToPlayerBalance($player->getName(), $this->getConfig()->get("luckyMoney"));
-			$luckyMessage_1 = str_replace("{PLAYER_NAME}", $player->getName(), $this->getConfig()->get("message"));
-			$luckyMessage_2 = str_replace("{MONEY}", $this->getConfig()->get("luckyMoney"), $luckyMessage_1);
-			$luckyMessage_3 = str_replace("{LUCKY_NUMBER}", $this->getConfig()->get("luckyNumber"), $luckyMessage_2);
+		$luckyNumber = $this->getNumberConfig("luckyNumber", 0);
+		$luckyMoney = $this->getNumberConfig("luckyMoney", 0);
+		if ($luckyNumberA === $luckyNumber) {
+			BedrockEconomyAPI::getInstance()->addToPlayerBalance($player->getName(), $luckyMoney);
+			$luckyMessage_1 = str_replace("{PLAYER_NAME}", $player->getName(), $this->getStringConfig("message"));
+			$luckyMessage_2 = str_replace("{MONEY}", (string) $luckyMoney, $luckyMessage_1);
+			$luckyMessage_3 = str_replace("{LUCKY_NUMBER}", (string) $luckyNumber, $luckyMessage_2);
 			$player->sendMessage($luckyMessage_3);
 			$this->data->set("number", 0);
 		}
 		$this->data->save();
+	}
+
+	private function getNumberConfig(string $key, int|float $default) : int|float {
+		$value = $this->getConfig()->get($key, $default);
+		return is_int($value) || is_float($value) ? $value : $default;
+	}
+
+	private function getStringConfig(string $key) : string {
+		$value = $this->getConfig()->get($key, "");
+		return is_string($value) ? $value : "";
 	}
 }
