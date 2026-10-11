@@ -8,5 +8,5 @@ projects:
     icon: icon.png
     libs:
     - src: thebigcrafter/Hydrogen/Hydrogen
-      version: ^1.0.0
+      version: ^1.1.3
 ...
