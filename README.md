@@ -1,12 +1,10 @@
-<!-- [![Build Status](https://www.travis-ci.com/thebigcrafter/LuckyPlayer.svg?branch=main)](https://www.travis-ci.com/thebigcrafter/LuckyPlayer) -->
-[![PoggitCI](https://poggit.pmmp.io/ci.shield/thebigcrafter/LuckyPlayer/LuckyPlayer)](https://poggit.pmmp.io/ci/thebigcrafter/LuckyPlayer/LuckyPlayer)
 ![GitHub all releases](https://img.shields.io/github/downloads/thebigcrafter/LuckyPlayer/total)
-[![](https://poggit.pmmp.io/shield.state/LuckyPlayer)](https://poggit.pmmp.io/p/LuckyPlayer)
-[![](https://poggit.pmmp.io/shield.dl.total/LuckyPlayer)](https://poggit.pmmp.io/p/LuckyPlayer)
+[![License](https://img.shields.io/github/license/thebigcrafter/LuckyPlayer)](https://github.com/thebigcrafter/LuckyPlayer#GPL-2.0-1)
 # LuckyPlayer
-**Give money to players when they join the server at lucky time.**  
-For example: You config ```luckyMoney: 100``` and ```luckyNumber: 1000```. If player is the 1000th player join the server, they will have 100$  
-``NOTE!`` Make sure [BedrockEconomy](https://github.com/cooldogedev/BedrockEconomy) is installed.
+**Give money to players when they join an Axolotl-PM server at a configured lucky time.**
+For example, with `luckyMoney: 100` and `luckyNumber: 1000`, the 1000th player to join receives 100 through [BedrockEconomy](https://github.com/cooldogedev/BedrockEconomy).
+
+BedrockEconomy must be installed because LuckyPlayer uses it to award the balance.
 # Config
 ```yaml
 luckyMoney: 100
@@ -19,9 +17,9 @@ message: "{PLAYER_NAME} is the {LUCKY_NUMBER}th player so he/she have {MONEY}$ f
 # {LUCKY_NUMBER} for the luckyNumber
 ```
 # Installation
-- Download `LuckyPlayer.phar` from the latest release.
-- Install BedrockEconomy if you want LuckyPlayer to award balances.
-- Place `LuckyPlayer.phar` in the server's `plugins` folder and restart the server.
+- Download `LuckyPlayer.phar` from [GitHub Releases](https://github.com/thebigcrafter/LuckyPlayer/releases). Use an older release only when investigating a compatibility issue.
+- Install BedrockEconomy before enabling LuckyPlayer.
+- Place `LuckyPlayer.phar` in the Axolotl-PM `plugins` folder and restart the server.
 
 # License
 Released under the GPL-2.0 license.
