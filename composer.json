@@ -2,9 +2,16 @@
     "name": "thebigcrafter/lucky-player",
     "description": "PocketMine-MP plugin that rewards a lucky joining player",
     "license": "GPL-2.0-only",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/axolotl-pm/PocketMine-MP",
+            "no-api": true
+        }
+    ],
     "require-dev": {
         "phpstan/phpstan": "^2.1",
-        "pocketmine/pocketmine-mp": "^5.44.3"
+        "axolotl-pm/pocketmine-mp": "5.49.1"
     },
     "autoload-dev": {
         "psr-4": {
