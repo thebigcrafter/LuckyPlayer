@@ -21,5 +21,19 @@ message: "{PLAYER_NAME} is the {LUCKY_NUMBER}th player so he/she have {MONEY}$ f
 - Install BedrockEconomy before enabling LuckyPlayer.
 - Place `LuckyPlayer.phar` in the Axolotl-PM `plugins` folder and restart the server.
 
+# Configuration
+
+After the first start, edit `plugin_data/LuckyPlayer/config.yml` to set:
+
+- `luckyMoney`: the amount credited through BedrockEconomy.
+- `luckyNumber`: the join count that receives the reward.
+- `message`: the message sent to the rewarded player. The `{PLAYER_NAME}`,
+  `{MONEY}` and `{LUCKY_NUMBER}` placeholders are replaced when the reward is
+  issued.
+
+LuckyPlayer stores the current join count in
+`plugin_data/LuckyPlayer/data.yml` under `number`. The counter resets after a
+reward is issued. The plugin has no commands or permissions of its own.
+
 # License
 Released under the GPL-2.0 license.

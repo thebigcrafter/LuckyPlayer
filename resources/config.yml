@@ -1,9 +1,9 @@
 luckyMoney: 100
 
-# Players who join the 1000th server will receive $ 100
+# The player who joins at the configured lucky number receives the configured amount.
 luckyNumber: 1000
 
 message: "{PLAYER_NAME} is the {LUCKY_NUMBER}th player so he/she have {MONEY}$ for free!"
 # {PLAYER_NAME} for the name of lucky player
 # {MONEY} for the luckyMoney
-# {LUCKY_NUMBER} fro the luckyNumber
+# {LUCKY_NUMBER} for the luckyNumber
