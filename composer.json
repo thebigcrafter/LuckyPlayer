@@ -22,7 +22,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "cooldogedev\\BedrockEconomy\\": "tools/stubs/BedrockEconomy/",
+            "NhanAZ\\EcoAPI\\": "virions/EcoAPI/src/NhanAZ/EcoAPI/",
             "thebigcrafter\\Hydrogen\\": "tools/stubs/Hydrogen/"
         }
     },

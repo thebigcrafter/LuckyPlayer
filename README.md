@@ -2,9 +2,9 @@
 [![License](https://img.shields.io/github/license/thebigcrafter/LuckyPlayer)](https://github.com/thebigcrafter/LuckyPlayer#GPL-2.0-1)
 # LuckyPlayer
 **Give money to players when they join an Axolotl-PM server at a configured lucky time.**
-For example, with `luckyMoney: 100` and `luckyNumber: 1000`, the 1000th player to join receives 100 through [BedrockEconomy](https://github.com/cooldogedev/BedrockEconomy).
+For example, with `luckyMoney: 100` and `luckyNumber: 1000`, the 1000th player to join receives 100 through [SimpleEconomy](https://github.com/NhanAZ-Plugins/SimpleEconomy) via [EcoAPI](https://github.com/NhanAZ-Libraries/EcoAPI).
 
-BedrockEconomy must be installed because LuckyPlayer uses it to award the balance.
+SimpleEconomy must be installed because LuckyPlayer uses it to award the balance through EcoAPI.
 # Config
 ```yaml
 luckyMoney: 100
@@ -18,14 +18,14 @@ message: "{PLAYER_NAME} is the {LUCKY_NUMBER}th player so he/she have {MONEY}$ f
 ```
 # Installation
 - Download `LuckyPlayer.phar` from [GitHub Releases](https://github.com/thebigcrafter/LuckyPlayer/releases). Use an older release only when investigating a compatibility issue.
-- Install BedrockEconomy before enabling LuckyPlayer.
+- Install SimpleEconomy before enabling LuckyPlayer.
 - Place `LuckyPlayer.phar` in the Axolotl-PM `plugins` folder and restart the server.
 
 # Configuration
 
 After the first start, edit `plugin_data/LuckyPlayer/config.yml` to set:
 
-- `luckyMoney`: the amount credited through BedrockEconomy.
+- `luckyMoney`: the amount credited through SimpleEconomy via EcoAPI.
 - `luckyNumber`: the join count that receives the reward.
 - `message`: the message sent to the rewarded player. The `{PLAYER_NAME}`,
   `{MONEY}` and `{LUCKY_NUMBER}` placeholders are replaced when the reward is

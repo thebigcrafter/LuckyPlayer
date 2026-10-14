@@ -2,6 +2,6 @@ name: LuckyPlayer
 authors: [tobydev27, thebigcrafter]
 version: 2.1.2
 description: Give money to players when they join the server at lucky time
-depend: BedrockEconomy
+depend: SimpleEconomy
 api: 5.0.0
 main: tobydev27\LuckyPlayer\Main

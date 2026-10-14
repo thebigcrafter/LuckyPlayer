@@ -10,7 +10,8 @@ declare(strict_types=1);
 
 namespace tobydev27\LuckyPlayer;
 
-use cooldogedev\BedrockEconomy\api\BedrockEconomyAPI;
+use NhanAZ\EcoAPI\EconomyProvider;
+use NhanAZ\EcoAPI\EcoAPI;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\plugin\PluginBase;
@@ -24,10 +25,13 @@ use function str_replace;
 class Main extends PluginBase implements Listener {
 
 	private Config $data;
+	private EconomyProvider $economyProvider;
 
 	protected function onEnable(): void {
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		Hydrogen::checkForUpdates($this);
+		EcoAPI::init();
+		$this->economyProvider = EcoAPI::getProvider("simpleeconomy");
 		@mkdir($this->getDataFolder());
 		$this->saveDefaultConfig();
 		$this->data = new Config($this->getDataFolder() . "data.yml", Config::YAML);
@@ -44,9 +48,9 @@ class Main extends PluginBase implements Listener {
 		$luckyNumber = $this->getNumberConfig("luckyNumber", 0);
 		$luckyMoney = $this->getNumberConfig("luckyMoney", 0);
 		if ($luckyNumberA === $luckyNumber) {
-			BedrockEconomyAPI::getInstance()->addToPlayerBalance(
-				$player->getName(),
-				(int) $luckyMoney,
+			$this->economyProvider->addMoney(
+				$player,
+				(float) $luckyMoney,
 				function (bool $updated) use ($player, $luckyMoney, $luckyNumber) : void {
 					if (!$updated) {
 						$this->getLogger()->warning("The lucky reward transaction failed; the join counter was not reset.");
