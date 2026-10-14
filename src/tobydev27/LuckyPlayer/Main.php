@@ -44,12 +44,23 @@ class Main extends PluginBase implements Listener {
 		$luckyNumber = $this->getNumberConfig("luckyNumber", 0);
 		$luckyMoney = $this->getNumberConfig("luckyMoney", 0);
 		if ($luckyNumberA === $luckyNumber) {
-			BedrockEconomyAPI::getInstance()->addToPlayerBalance($player->getName(), $luckyMoney);
-			$luckyMessage_1 = str_replace("{PLAYER_NAME}", $player->getName(), $this->getStringConfig("message"));
-			$luckyMessage_2 = str_replace("{MONEY}", (string) $luckyMoney, $luckyMessage_1);
-			$luckyMessage_3 = str_replace("{LUCKY_NUMBER}", (string) $luckyNumber, $luckyMessage_2);
-			$player->sendMessage($luckyMessage_3);
-			$this->data->set("number", 0);
+			BedrockEconomyAPI::getInstance()->addToPlayerBalance(
+				$player->getName(),
+				(int) $luckyMoney,
+				function (bool $updated) use ($player, $luckyMoney, $luckyNumber) : void {
+					if (!$updated) {
+						$this->getLogger()->warning("The lucky reward transaction failed; the join counter was not reset.");
+						return;
+					}
+
+					$luckyMessage_1 = str_replace("{PLAYER_NAME}", $player->getName(), $this->getStringConfig("message"));
+					$luckyMessage_2 = str_replace("{MONEY}", (string) $luckyMoney, $luckyMessage_1);
+					$luckyMessage_3 = str_replace("{LUCKY_NUMBER}", (string) $luckyNumber, $luckyMessage_2);
+					$player->sendMessage($luckyMessage_3);
+					$this->data->set("number", 0);
+					$this->data->save();
+				},
+			);
 		}
 		$this->data->save();
 	}
