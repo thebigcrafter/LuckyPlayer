@@ -4,124 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "883d5cf5c790acc3ba5fa028e7baa29b",
+    "content-hash": "cda00d550394c41563b26e4ef0a8b45b",
     "packages": [
-        {
-            "name": "sof3/await-generator",
-            "version": "3.6.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/SOF3/await-generator.git",
-                "reference": "90f4dda776eaf9bcb4693599c61c42e4c584a73f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/SOF3/await-generator/zipball/90f4dda776eaf9bcb4693599c61c42e4c584a73f",
-                "reference": "90f4dda776eaf9bcb4693599c61c42e4c584a73f",
-                "shasum": ""
-            },
-            "require": {
-                "ext-bcmath": "*",
-                "php": "^8.0"
-            },
-            "require-dev": {
-                "composer/package-versions-deprecated": "1.11.99.1",
-                "infection/infection": "^0.18.2 || ^0.20.2 || ^0.26.0",
-                "phpstan/phpstan": "^0.12.84",
-                "phpunit/phpunit": "^9"
-            },
-            "type": "library",
-            "extra": {
-                "virion": {
-                    "spec": "3.0",
-                    "namespace-root": "SOFe\\AwaitGenerator"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "SOFe\\AwaitGenerator\\": "await-generator/src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "SOFe",
-                    "email": "sofe2038@gmail.com"
-                }
-            ],
-            "description": "Use async/await in PHP using generators",
-            "support": {
-                "issues": "https://github.com/SOF3/await-generator/issues",
-                "source": "https://github.com/SOF3/await-generator/tree/3.6.1"
-            },
-            "time": "2023-07-27T09:45:08+00:00"
-        },
-        {
-            "name": "thebigcrafter/hydrogen",
-            "version": "1.1.4",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thebigcrafter/Hydrogen.git",
-                "reference": "5cad458f4783f7812859e88855e944df00998354"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thebigcrafter/Hydrogen/zipball/5cad458f4783f7812859e88855e944df00998354",
-                "reference": "5cad458f4783f7812859e88855e944df00998354",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^8.1",
-                "sof3/await-generator": "^3.6"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.17",
-                "phpstan/phpstan": "^2.1",
-                "pocketmine/pocketmine-mp": "^5.0"
-            },
-            "type": "library",
-            "extra": {
-                "virion": {
-                    "spec": "3.0",
-                    "namespace-root": "thebigcrafter\\Hydrogen"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "thebigcrafter\\Hydrogen\\": "src/thebigcrafter/Hydrogen"
-                }
-            },
-            "scripts": {
-                "fix-cs": [
-                    "./vendor/bin/php-cs-fixer fix"
-                ],
-                "analyse": [
-                    "./vendor/bin/phpstan analyse"
-                ],
-                "test": [
-                    "php tests/InternetTest.php"
-                ]
-            },
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "thebigcrafter"
-                }
-            ],
-            "description": "A library that provides common functionality for the plugins of thebigcrafter",
-            "support": {
-                "source": "https://github.com/thebigcrafter/Hydrogen/tree/1.1.4",
-                "issues": "https://github.com/thebigcrafter/Hydrogen/issues"
-            },
-            "time": "2026-10-13T14:30:43+00:00"
-        }
-    ],
-    "packages-dev": [
         {
             "name": "adhocore/json-comment",
             "version": "1.2.1",
@@ -578,68 +462,53 @@
             "time": "2026-06-29T16:03:16+00:00"
         },
         {
-            "name": "phpstan/phpstan",
-            "version": "2.3.1",
+            "name": "nhanaz/ecoapi",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/NhanAZ-Libraries/EcoAPI",
+                "reference": "23d9d5e5e86c8461664b282d2241febb4b4d2c08"
+            },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/6155239b488e95d26d1ebd95c6b4bb294d7f09db",
-                "reference": "6155239b488e95d26d1ebd95c6b4bb294d7f09db",
+                "url": "https://api.github.com/repos/NhanAZ-Libraries/EcoAPI/zipball/23d9d5e5e86c8461664b282d2241febb4b4d2c08",
+                "reference": "23d9d5e5e86c8461664b282d2241febb4b4d2c08",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.4|^8.0"
+                "php": "^8.1",
+                "pocketmine/pocketmine-mp": "^5.0.0"
             },
-            "conflict": {
-                "phpstan/phpstan-shim": "*"
+            "require-dev": {
+                "axolotl-pm/pocketmine-mp": "5.49.1",
+                "phpstan/phpstan": "^2.1"
             },
-            "bin": [
-                "phpstan",
-                "phpstan.phar"
-            ],
+            "default-branch": true,
             "type": "library",
+            "extra": {
+                "virion": {
+                    "spec": "3.0",
+                    "namespace-root": "NhanAZ\\EcoAPI"
+                }
+            },
             "autoload": {
-                "files": [
-                    "bootstrap.php"
+                "psr-4": {
+                    "NhanAZ\\EcoAPI\\": "src/NhanAZ/EcoAPI/"
+                }
+            },
+            "scripts": {
+                "phpstan": [
+                    "@php vendor/bin/phpstan analyse --level=max --no-progress -c phpstan.neon.dist src example/src"
+                ],
+                "test": [
+                    "@php tests/provider-money.php"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
-                "MIT"
+                "Apache-2.0"
             ],
-            "authors": [
-                {
-                    "name": "Ondřej Mirtes"
-                },
-                {
-                    "name": "Markus Staab"
-                },
-                {
-                    "name": "Vincent Langlet"
-                }
-            ],
-            "description": "PHPStan - PHP Static Analysis Tool",
-            "keywords": [
-                "dev",
-                "static analysis"
-            ],
-            "support": {
-                "docs": "https://phpstan.org/user-guide/getting-started",
-                "forum": "https://github.com/phpstan/phpstan/discussions",
-                "issues": "https://github.com/phpstan/phpstan/issues",
-                "security": "https://github.com/phpstan/phpstan/security/policy",
-                "source": "https://github.com/phpstan/phpstan-src"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/ondrejmirtes",
-                    "type": "github"
-                },
-                {
-                    "url": "https://github.com/phpstan",
-                    "type": "github"
-                }
-            ],
-            "time": "2026-10-08T21:09:11+00:00"
+            "description": "Simple and unified economy API library for PocketMine-MP plugins",
+            "time": "2026-10-14T05:55:11+00:00"
         },
         {
             "name": "pocketmine/binaryutils",
@@ -1224,6 +1093,59 @@
             "time": "2026-09-16T11:39:30+00:00"
         },
         {
+            "name": "sof3/await-generator",
+            "version": "3.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SOF3/await-generator.git",
+                "reference": "90f4dda776eaf9bcb4693599c61c42e4c584a73f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SOF3/await-generator/zipball/90f4dda776eaf9bcb4693599c61c42e4c584a73f",
+                "reference": "90f4dda776eaf9bcb4693599c61c42e4c584a73f",
+                "shasum": ""
+            },
+            "require": {
+                "ext-bcmath": "*",
+                "php": "^8.0"
+            },
+            "require-dev": {
+                "composer/package-versions-deprecated": "1.11.99.1",
+                "infection/infection": "^0.18.2 || ^0.20.2 || ^0.26.0",
+                "phpstan/phpstan": "^0.12.84",
+                "phpunit/phpunit": "^9"
+            },
+            "type": "library",
+            "extra": {
+                "virion": {
+                    "spec": "3.0",
+                    "namespace-root": "SOFe\\AwaitGenerator"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "SOFe\\AwaitGenerator\\": "await-generator/src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "SOFe",
+                    "email": "sofe2038@gmail.com"
+                }
+            ],
+            "description": "Use async/await in PHP using generators",
+            "support": {
+                "issues": "https://github.com/SOF3/await-generator/issues",
+                "source": "https://github.com/SOF3/await-generator/tree/3.6.1"
+            },
+            "time": "2023-07-27T09:45:08+00:00"
+        },
+        {
             "name": "symfony/filesystem",
             "version": "v6.4.45",
             "source": {
@@ -1292,11 +1214,140 @@
                 }
             ],
             "time": "2026-08-23T07:59:31+00:00"
+        },
+        {
+            "name": "thebigcrafter/hydrogen",
+            "version": "1.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thebigcrafter/Hydrogen.git",
+                "reference": "5cad458f4783f7812859e88855e944df00998354"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thebigcrafter/Hydrogen/zipball/5cad458f4783f7812859e88855e944df00998354",
+                "reference": "5cad458f4783f7812859e88855e944df00998354",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1",
+                "sof3/await-generator": "^3.6"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.17",
+                "phpstan/phpstan": "^2.1",
+                "pocketmine/pocketmine-mp": "^5.0"
+            },
+            "type": "library",
+            "extra": {
+                "virion": {
+                    "spec": "3.0",
+                    "namespace-root": "thebigcrafter\\Hydrogen"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "thebigcrafter\\Hydrogen\\": "src/thebigcrafter/Hydrogen"
+                }
+            },
+            "scripts": {
+                "fix-cs": [
+                    "./vendor/bin/php-cs-fixer fix"
+                ],
+                "analyse": [
+                    "./vendor/bin/phpstan analyse"
+                ],
+                "test": [
+                    "php tests/InternetTest.php"
+                ]
+            },
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "thebigcrafter"
+                }
+            ],
+            "description": "A library that provides common functionality for the plugins of thebigcrafter",
+            "support": {
+                "source": "https://github.com/thebigcrafter/Hydrogen/tree/1.1.4",
+                "issues": "https://github.com/thebigcrafter/Hydrogen/issues"
+            },
+            "time": "2026-10-13T14:30:43+00:00"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "phpstan/phpstan",
+            "version": "2.3.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/6155239b488e95d26d1ebd95c6b4bb294d7f09db",
+                "reference": "6155239b488e95d26d1ebd95c6b4bb294d7f09db",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4|^8.0"
+            },
+            "conflict": {
+                "phpstan/phpstan-shim": "*"
+            },
+            "bin": [
+                "phpstan",
+                "phpstan.phar"
+            ],
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ondřej Mirtes"
+                },
+                {
+                    "name": "Markus Staab"
+                },
+                {
+                    "name": "Vincent Langlet"
+                }
+            ],
+            "description": "PHPStan - PHP Static Analysis Tool",
+            "keywords": [
+                "dev",
+                "static analysis"
+            ],
+            "support": {
+                "docs": "https://phpstan.org/user-guide/getting-started",
+                "forum": "https://github.com/phpstan/phpstan/discussions",
+                "issues": "https://github.com/phpstan/phpstan/issues",
+                "security": "https://github.com/phpstan/phpstan/security/policy",
+                "source": "https://github.com/phpstan/phpstan-src"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/ondrejmirtes",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/phpstan",
+                    "type": "github"
+                }
+            ],
+            "time": "2026-10-08T21:09:11+00:00"
         }
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "nhanaz/ecoapi": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {},
