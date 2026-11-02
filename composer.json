@@ -24,7 +24,7 @@
     },
     "require-dev": {
         "phpstan/phpstan": "^2.1",
-        "axolotl-pm/pocketmine-mp": "5.49.1"
+        "axolotl-pm/pocketmine-mp": "5.51.1"
     },
     "autoload-dev": {
         "psr-4": {

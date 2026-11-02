@@ -11,14 +11,13 @@ permissions:
 jobs:
   build:
     name: Build and validate LuckyPlayer plugin
-    uses: NhanAZ/DevTools/.github/workflows/build-plugin.yml@3dedda2a1f6e42885aa680aaadeebacbc0f62733
+    uses: NhanAZ/DevTools/.github/workflows/build-plugin.yml@v2
     with:
-      axolotl-ref: dfe0d07e48a9e8d5a4a242fa43ff1cd3b743a955
+      axolotl-ref: e881fc1bc1c401545baf6bd1f824e41ff3f57bd1
       prepare-dependencies: true
       virions: .devtools-virions
-      php-version: '8.2'
+      php-version: '8.4'
       pm-version-major: '5'
       phpstan: max
       phpstan-paths: tools/stubs
       artifact-name: LuckyPlayer-${{ github.sha }}
-      retention-days: 14
