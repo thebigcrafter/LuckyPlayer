@@ -10,8 +10,8 @@ declare(strict_types=1);
 
 namespace tobydev27\LuckyPlayer;
 
-use NhanAZ\EcoAPI\EconomyProvider;
-use NhanAZ\EcoAPI\EcoAPI;
+use AxolotlBucketLabs\EconomyProviderAPI\EconomyProvider;
+use AxolotlBucketLabs\EconomyProviderAPI\EconomyProviderAPI;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\plugin\PluginBase;
@@ -30,8 +30,8 @@ class Main extends PluginBase implements Listener {
 	protected function onEnable(): void {
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		Hydrogen::checkForUpdates($this);
-		EcoAPI::init();
-		$this->economyProvider = EcoAPI::getProvider("simpleeconomy");
+		EconomyProviderAPI::init();
+		$this->economyProvider = EconomyProviderAPI::getProvider("simpleeconomy");
 		@mkdir($this->getDataFolder());
 		$this->saveDefaultConfig();
 		$this->data = new Config($this->getDataFolder() . "data.yml", Config::YAML);

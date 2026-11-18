@@ -2,9 +2,9 @@
 [![License](https://img.shields.io/github/license/thebigcrafter/LuckyPlayer)](https://github.com/thebigcrafter/LuckyPlayer#GPL-2.0-1)
 # LuckyPlayer
 **Give money to players when they join an Axolotl-PM server at a configured lucky time.**
-For example, with `luckyMoney: 100` and `luckyNumber: 1000`, the 1000th player to join receives 100 through [SimpleEconomy](https://github.com/NhanAZ-Plugins/SimpleEconomy) via [EcoAPI](https://github.com/NhanAZ-Libraries/EcoAPI).
+For example, with `luckyMoney: 100` and `luckyNumber: 1000`, the 1000th player to join receives 100 through [SimpleEconomy](https://github.com/AxolotlBucketLabs/SimpleEconomy) using [EconomyProviderAPI](https://github.com/AxolotlBucketLabs/EconomyProviderAPI).
 
-SimpleEconomy must be installed because LuckyPlayer uses it to award the balance through EcoAPI.
+SimpleEconomy must be installed because LuckyPlayer uses it to award the balance through EconomyProviderAPI.
 # Config
 ```yaml
 luckyMoney: 100
@@ -25,7 +25,7 @@ message: "{PLAYER_NAME} is the {LUCKY_NUMBER}th player so he/she have {MONEY}$ f
 
 After the first start, edit `plugin_data/LuckyPlayer/config.yml` to set:
 
-- `luckyMoney`: the amount credited through SimpleEconomy via EcoAPI.
+- `luckyMoney`: the amount credited through SimpleEconomy using EconomyProviderAPI.
 - `luckyNumber`: the join count that receives the reward.
 - `message`: the message sent to the rewarded player. The `{PLAYER_NAME}`,
   `{MONEY}` and `{LUCKY_NUMBER}` placeholders are replaced when the reward is
